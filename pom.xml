@@ -9,40 +9,14 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.github.radtin</groupId>
-    <artifactId>dlq-jms-spring-boot</artifactId>
+    <artifactId>dlq-jms-spring-boot-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>dlq-jms-spring-boot</name>
-    <description>Annotation for sending messages to the Dead Letter Queue if there is an exception.</description>
+    <name>dlq-jms-spring-boot-parent</name>
+    <packaging>pom</packaging>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-aop</artifactId>
-        </dependency>
-        <!-- ================================================================================== -->
-        <!-- Comment out "spring-jms" and "activemq-broker" if you are integrating with IBM MQ. -->
-        <!-- ================================================================================== -->
-        <dependency>
-        <groupId>org.springframework</groupId>
-        <artifactId>spring-jms</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.activemq</groupId>
-            <artifactId>activemq-broker</artifactId>
-        </dependency>
-        <!-- ========================================================================== -->
-        <!-- Uncomment "mq-jms-spring-boot-starter" if you are integrating with IBM MQ. -->
-        <!-- ========================================================================== -->
-        <!--<dependency>-->
-            <!--<groupId>com.ibm.mq</groupId>-->
-            <!--<artifactId>mq-jms-spring-boot-starter</artifactId>-->
-            <!--<version>2.1.0</version>-->
-        <!--</dependency>-->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
-        </dependency>
-    </dependencies>
+    <modules>
+        <module>dlq-jms-spring-boot</module>
+        <module>dlq-jms-spring-boot-example</module>
+    </modules>
 
 </project>

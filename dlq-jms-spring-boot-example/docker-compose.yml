@@ -1,0 +1,13 @@
+version: '3'
+services:
+#  https://:9443/ibmmq/console
+#  User: admin
+#  Password: passw0rd
+  ibmmq:
+    image: ibmcom/mq
+    environment:
+      - LICENSE=accept
+      - MQ_QMGR_NAME=QM1
+    ports:
+      - 1414:1414
+      - 9443:9443
